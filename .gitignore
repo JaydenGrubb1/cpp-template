@@ -36,3 +36,7 @@ build/
 
 # Cache directory
 .cache/
+
+# Editor directories
+.vscode/
+.idea/
