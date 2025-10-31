@@ -36,42 +36,32 @@ DerivePointerAlignment: false
 FixNamespaceComments: true
 IncludeBlocks: Regroup
 IncludeCategories:
-  - Regex:           '^".*\.hpp"'
+  # - Regex:           '^<PROJECT_NAME/.*\.(hpp|hh|h)>'
+  #   Priority:        0
+  #   CaseSensitive:   false
+  - Regex:           '^<.*\.(hpp|hh)>'
     Priority:        1
-    SortPriority:    0
-    CaseSensitive:   false
-  - Regex:           '^".*\.hh"'
-    Priority:        1
-    SortPriority:    1
-    CaseSensitive:   false
-  - Regex:           '^".*\.h"'
-    Priority:        2
-    SortPriority:    0
-    CaseSensitive:   false
-  - Regex:           '^<.*\.hpp>'
-    Priority:        3
-    SortPriority:    0
-    CaseSensitive:   false
-  - Regex:           '^<.*\.hh>'
-    Priority:        3
-    SortPriority:    1
     CaseSensitive:   false
   - Regex:           '^<.*\.h>'
-    Priority:        4
-    SortPriority:    0
+    Priority:        2
     CaseSensitive:   false
   - Regex:           '^<.*>'
-    Priority:        5
-    SortPriority:    0
+    Priority:        3
     CaseSensitive:   false
-IncludeIsMainRegex: '([-_](test|unittest))?$'
+  - Regex:           '^".*\.(hpp|hh)"'
+    Priority:        4
+    CaseSensitive:   false
+  - Regex:           '^".*\.h"'
+    Priority:        5
+    CaseSensitive:   false
+IncludeIsMainRegex: '^$'
 IndentCaseLabels: true
 IndentPPDirectives: BeforeHash
 IndentWidth: 4
 IndentWrappedFunctionNames: false
 KeepEmptyLinesAtTheStartOfBlocks: false
 MaxEmptyLinesToKeep: 1
-NamespaceIndentation: All
+NamespaceIndentation: None
 PackConstructorInitializers: CurrentLine
 PointerAlignment: Left
 ReferenceAlignment: Left
@@ -95,7 +85,7 @@ SpacesInCStyleCastParentheses: false
 SpacesInContainerLiterals: false
 SpacesInParentheses: false
 SpacesInSquareBrackets: false
-Standard: c++20
+Standard: c++23
 TabWidth: 4
 UseTab: Always
 ColumnLimit: 120
